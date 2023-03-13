@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-home;
+  }
   h1 {
-    @apply text-extra leading-tight tracking-tight;
+    @apply text-extra uppercase leading-tight tracking-tight;
   }
 
   h2 {
@@ -13,6 +16,25 @@
 
   h3 {
     @apply text-xxlarge leading-tight;
+  }
+  nav {
+    @apply flex items-center justify-between p-10 text-base uppercase text-primary;
+  }
+
+  .navs {
+    @apply flex gap-x-20;
+  }
+
+  .element {
+    @apply p-10;
+  }
+
+  .sponsors {
+    @apply pt-10 text-primary;
+  }
+
+  .banner {
+    @apply flex items-center justify-between bg-primary px-10 py-5;
   }
 
   .text-extra {
@@ -49,6 +71,10 @@
 
   .text-xsmall {
     @apply text-xxs md:text-xs;
+  }
+
+  footer {
+    @apply bg-[#FFFFFF];
   }
 }
 
