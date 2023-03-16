@@ -1,6 +1,9 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
+import { Archivo_Black } from "@next/font/google";
+const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
+
 enum Tag {
   H1,
   H2,
@@ -125,7 +128,8 @@ export function Title(props: Props) {
           onClick && "cursor-pointer",
           uppercase && "uppercase",
           truncate,
-          shadow && "drop-shadow"
+          shadow && "drop-shadow",
+          archivoBlack.className
         )}
         onClick={onClick}
       >

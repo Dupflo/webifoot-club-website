@@ -1,10 +1,9 @@
-import Navigation from "@/components/common/navigation";
-import type { Metadata } from "next";
-import Footer from "../components/common/footer";
-
 import { Archivo_Black, Open_Sans, Poppins } from "@next/font/google";
+import type { Metadata } from "next";
+import Example from "@/components/common/navbar";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import InterMtl from "../assets/layout/intermtl-logo.png";
+import Footer from "../components/common/footer";
 
 import "./globals.css";
 
@@ -20,8 +19,10 @@ const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Navigation logo={InterMtl} Fb={FaFacebookF} Insta={FaInstagram} openFont={openSans.className} />
+      <body className="bg-home">
+        <Example />
+       
+
         <main>{children}</main>
         <Footer
           logo={InterMtl}

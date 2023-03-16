@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply bg-home;
-  }
   h1 {
     @apply text-extra uppercase leading-tight tracking-tight;
   }
@@ -18,23 +15,7 @@
     @apply text-xxlarge leading-tight;
   }
   nav {
-    @apply flex items-center justify-between p-10 text-base uppercase text-primary;
-  }
-
-  .navs {
-    @apply flex gap-x-20;
-  }
-
-  .element {
-    @apply p-10;
-  }
-
-  .sponsors {
-    @apply pt-10 text-primary;
-  }
-
-  .banner {
-    @apply flex items-center justify-between bg-primary px-10 py-5;
+    @apply text-base uppercase text-primary;
   }
 
   .text-extra {
@@ -73,11 +54,60 @@
     @apply text-xxs md:text-xs;
   }
 
+  .outline-blue {
+    color: transparent;
+    -webkit-text-stroke: 2px #12145f;
+  }
+
+  .outline-red {
+    color: transparent;
+    -webkit-text-stroke: 2px #e7455b;
+  }
+
   footer {
-    @apply bg-[#FFFFFF];
+    @apply bg-white;
   }
 }
 
 main {
   @apply space-y-28 lg:space-y-36;
+}
+
+@layer components {
+  .navs {
+    @apply flex gap-x-20 4xl:gap-x-32;
+  }
+
+
+  .sponsors {
+    @apply pt-10 text-primary;
+  }
+
+  .banner {
+    @apply flex items-center justify-between  px-10 py-5;
+  }
+
+  .goalTag {
+    @apply md:text-[60px] lg:text-[80px] xl:text-[100px] 2xl:text-[130px]
+  }
+  .teamTag {
+    @apply md:text-[40px] lg:text-[50px] 2xl:text-[80px]
+  }
+
+  .max-w-container {
+    @apply mx-auto w-full max-w-[1440px] px-10 
+  }
+
+  .ajust-y {
+    @apply py-10
+  }
+
+  .ajust-x {
+    @apply px-10
+  }
+
+  .zoom {
+    @apply hover:scale-105 duration-300 ease-in cursor-pointer
+  }
+
 }

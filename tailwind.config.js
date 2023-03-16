@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#12145F",
-        secondary: "#FFFFFF",
+        secondary: "#051984",
+        red: "#E7455B",
         accent: "#E7455B",
         home: "#E7E9F2",
         gray: { DEFAULT: "#F9F8F9" },
@@ -21,6 +22,14 @@ module.exports = {
         "2xl": "1.875rem", // 30px
         "3xl": "2.25rem", // 36px
         "4xl": "3.125rem", // 50px
+        "5xl": "4.375rem", //70px
+        "xxl": "6.250rem" //100px
+      },
+      screens: {
+        "4xl": "2020px",
+      },
+      animation: {
+        "spin-slow": "spin 70s linear infinite",
       },
     },
   },

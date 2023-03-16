@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navigation(props: any) {
   return (
-    <>
+    <header className="max-w-container">
       <nav className={props.openFont}>
         <div className="navs">
           <Link href="#" className="underline underline-offset-8">
@@ -24,6 +24,6 @@ export default function Navigation(props: any) {
           </div>
         </div>
       </nav>
-    </>
+    </header>
   );
 }
