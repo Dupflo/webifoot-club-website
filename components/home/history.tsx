@@ -1,21 +1,21 @@
 import { Poppins } from "@next/font/google";
 import classNames from "classnames";
 import Image from "next/image";
-import history from "../../assets/home/history.jpg";
+import team from "../../assets/home/team-inter.jpg";
 import Button from "../common/button";
 import { Text, Title } from "../common/typography";
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 
 export default function History() {
   return (
-    <div className="bg-secondary ">
-      <div className="max-w-container p-0 flex px-20">
-        <div className="relative h-full w-full max-w-[491px]">
-          <Image src={history} alt="" className="object-cover h-[500px]" />
+    <div className="bg-primary ">
+      <div className="max-w-container flex h-[550px] flex-col p-0 sm:h-[600px] md:h-[650px]  lg:flex-row">
+        <div className="relative max-h-[300px] max-w-[1200px] lg:max-h-[700px] lg:max-w-[600px]">
+          <Image src={team} alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="flex flex-col justify-center gap-10 p-5 xl:pl-20 2xl:pl-40">
+        <div className="flex flex-col justify-around gap-5 p-10 px-10 lg:justify-center lg:gap-10 xl:pl-40">
           <Title
-            size={Title.size.EXTRA}
+            size={Title.size.XXXLARGE}
             color={Title.color.WHITE}
             weight={Title.weight.BOLD}
             align={Title.align.LEFT}
@@ -23,7 +23,12 @@ export default function History() {
           >
             L'Inter Montréal
           </Title>
-          <Text color={Title.color.WHITE} weight={Title.weight.BOLD} className={classNames(poppins.className)}>
+          <Text
+            size={Text.size.MEDIUM}
+            color={Title.color.WHITE}
+            weight={Title.weight.BOLD}
+            className={classNames(poppins.className)}
+          >
             Fondée en 2020, l’Inter Montréal est un projet qui a pris naissance dans le cœur de trois passionnés de
             football : François, Raphaël et Benoît. Le soccer québécois ne cesse d’évoluer et le nombre de licenciés
             augmente chaque année. L’arrivée de la coupe du monde 2026 au Canada n’a fait que confirmer cette tendance

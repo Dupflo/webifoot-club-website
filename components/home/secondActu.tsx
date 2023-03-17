@@ -3,9 +3,9 @@ import Actu from "../../assets/home/actu.jpg";
 import { Text, Title } from "../common/typography";
 export default function SecondActu() {
   return (
-    <div>
-      <div className="sm:w-[32rem] lg:w-[24rem] 2xl:w-[36rem] overflow-hidden">
-        <Image src={Actu} width="1150" height="582" alt="" className="object-cover zoom" />
+    <div className="overflow-hidden lg:max-w-[30rem] 2xl:max-w-[36rem]">
+      <div>
+        <Image src={Actu} alt="" className="zoom h-full w-full object-cover" />
       </div>
       <span className="flex flex-col gap-y-1 py-2">
         <Title

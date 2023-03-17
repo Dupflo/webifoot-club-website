@@ -4,11 +4,11 @@ import News from "@/components/home/news";
 import History from "@/components/home/history";
 export default function HomePage() {
   return (
-    <div>
+    <>
       <Hero />
       <News />
       <Tag/>
       <History/>
-    </div>
+    </>
   );
 }

@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-extra uppercase leading-tight tracking-tight;
+    @apply text-xl sm:text-3xl lg:text-4xl uppercase leading-tight tracking-tight;
   }
 
   h2 {
@@ -19,15 +19,15 @@
   }
 
   .text-extra {
-    @apply text-3xl font-semibold md:text-4xl;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-xxl;
   }
 
   .text-xxxlarge {
-    @apply text-2xl font-semibold md:text-3xl;
+    @apply text-lg sm:text-xl lg:text-3xl xl:text-4xl;
   }
 
   .text-xxlarge {
-    @apply text-xl md:text-2xl;
+    @apply text-sm sm:text-xl md:text-2xl;
   }
 
   .text-xlarge {
@@ -39,7 +39,7 @@
   }
 
   .text-medium {
-    @apply text-sm md:text-md;
+    @apply text-xs sm:text-sm md:text-md;
   }
 
   .text-normal {
@@ -69,45 +69,38 @@
   }
 }
 
-main {
-  @apply space-y-28 lg:space-y-36;
-}
+
 
 @layer components {
   .navs {
     @apply flex gap-x-20 4xl:gap-x-32;
   }
 
-
-  .sponsors {
-    @apply pt-10 text-primary;
-  }
-
+ 
   .banner {
     @apply flex items-center justify-between  px-10 py-5;
   }
 
   .goalTag {
-    @apply md:text-[60px] lg:text-[80px] xl:text-[100px] 2xl:text-[130px]
+    @apply md:text-[60px] lg:text-[80px] xl:text-[100px] 2xl:text-[130px];
   }
   .teamTag {
-    @apply md:text-[40px] lg:text-[50px] 2xl:text-[80px]
+    @apply md:text-[40px] lg:text-[50px] 2xl:text-[80px];
   }
 
   .max-w-container {
-    @apply mx-auto w-full max-w-[1440px] px-10 
+    @apply mx-auto w-full max-w-[1440px] px-10;
   }
 
   .ajust-y {
-    @apply py-10
+    @apply py-10;
   }
 
   .ajust-x {
-    @apply px-10
+    @apply px-10;
   }
 
   .zoom {
-    @apply hover:scale-105 duration-300 ease-in cursor-pointer
+    @apply cursor-pointer duration-300 ease-in sm:hover:scale-105;
   }
-
 }
