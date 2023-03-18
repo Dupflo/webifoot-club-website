@@ -13,34 +13,25 @@ export default function Navigation() {
         <header className="max-w-container md:ajust-y  ">
           <div className="w-full md:relative ">
             <div className=" lg:ajust-x hidden items-center justify-between md:flex ">
-              <a href="#" className="inline-flex items-center border-b-2 border-primary font-medium ">
+              <a href="/" className="inline-flex items-center border-b-2 border-primary font-medium ">
                 Accueil
               </a>
               <a
-                href="#"
+                href="/history"
                 className="inline-flex items-center border-b-2 border-transparent text-base font-medium"
               >
                 Histoire
               </a>
-              <a
-                href="#"
-                className="inline-flex items-center border-b-2 border-transparent text-base font-medium"
-              >
+              <a href="/staff" className="inline-flex items-center border-b-2 border-transparent text-base font-medium">
                 Staff
               </a>
               <div className="w-[90px]">
                 <Image src={InterMtl} width="250" height="251" alt="logo" />
               </div>
-              <a
-                href="#"
-                className="inline-flex items-center border-b-2 border-transparent text-base font-medium"
-              >
+              <a href="/news" className="inline-flex items-center border-b-2 border-transparent text-base font-medium">
                 Actualités
               </a>
-              <a
-                href="#"
-                className="inline-flex items-center border-b-2 border-transparent text-base font-medium"
-              >
+              <a href="#" className="inline-flex items-center border-b-2 border-transparent text-base font-medium">
                 Contact
               </a>
               <div className="flex gap-5">
