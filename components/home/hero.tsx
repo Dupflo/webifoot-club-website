@@ -6,7 +6,7 @@ import { Title } from "../common/typography";
 
 export default function Hero() {
   return (
-    <div className="max-w-container relative flex flex-col items-center justify-center">
+    <div className="max-w-container relative flex flex-col items-center justify-center mt-24 md:mt-40">
       <Title
         size={Title.size.EXTRA}
         color={Title.color.PRIMARY}

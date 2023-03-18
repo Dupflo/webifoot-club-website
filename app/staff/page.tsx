@@ -1,5 +1,8 @@
-import React from "react";
-
+import Header from "@/components/staff/header";
 export default function StaffPage() {
-  return <div>Staff Page</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
