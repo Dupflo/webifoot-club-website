@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Berthier from "../../assets/staff/berthier.jpg";
 import Clavel from "../../assets/staff/clavel.jpg";
