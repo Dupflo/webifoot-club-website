@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-xl sm:text-3xl lg:text-4xl uppercase leading-tight tracking-tight;
+    @apply text-xl uppercase leading-tight tracking-tight sm:text-3xl lg:text-4xl;
   }
 
   h2 {
@@ -69,14 +69,11 @@
   }
 }
 
-
-
 @layer components {
   .navs {
     @apply flex gap-x-20 4xl:gap-x-32;
   }
 
- 
   .banner {
     @apply flex items-center justify-between  px-10 py-5;
   }
@@ -98,6 +95,10 @@
 
   .ajust-x {
     @apply px-10;
+  }
+
+  .img-art-property {
+    @apply h-full max-h-[200px] w-full overflow-hidden sm:max-h-[400px] sm:max-w-[1200px] lg:min-h-[550px] lg:min-w-[400px];
   }
 
   .zoom {

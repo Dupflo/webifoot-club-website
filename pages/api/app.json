@@ -24,5 +24,29 @@
       "name": "Raphaël Iscar",
       "about": "Raphaël vient apporter son expérience en stratégie de communication digitale pour donner une image innovante au club de l’Inter. Il est aussi en charge de s’assurer de la bonne santé financière du club afin de pouvoir vous permettre de bénéficier d’évènements spéciaux, et d’équipement de première qualité."
     }
+  ],
+
+  "history": [
+    {
+      "id": 0,
+      "title": "Un club, une marque, un esprit",
+      "para_1": "Fondée en 2020, l'Inter Montréal est un projet qui a pris naissance dans le cœur de trois passionnés de football : François, Raphaël et Benoît. Le soccer québécois ne cesse d’évoluer et le nombre de licenciés augmente chaque année. L’arrivée de la coupe du monde 2026 au Canada n’a fait que confirmer cette tendance et agit comme un accélérateur pour le soccer au Québec. La ville de Montréal est aujourd’hui un véritable terrain fertile pour les clubs qui souhaitent participer à son développement.",
+      "para_2": "Installés depuis plusieurs années au Québec et après avoir navigué dans différentes ligues et équipes de Montréal, les trois amis ont donc décidé de sauter le pas en créant leur propre club. Evoluant au sein de l'ARS Concordia, niveau A, l’idée est simple. Pousser le curseur un peu plus loin qu’une simple équipe de potes partageant une bière à la fin d’une rencontre. Et si l’esprit familial d’après-match et le partage reste des piliers du club, l’Inter de Montréal a bâti son projet sur ses ambitions sportives, un style travaillé et le plaisir de jouer dans un environnement bienveillant.",
+      "para_3": "Avoir un esprit professionnel dans un monde amateur."
+    },
+    {
+      "id": 1,
+      "title": "Un club",
+      "para_1": "Fondée en 2020, l'Inter Montréal est un projet qui a pris naissance dans le cœur de trois passionnés de football : François, Raphaël et Benoît. Le soccer québécois ne cesse d’évoluer et le nombre de licenciés augmente chaque année. L’arrivée de la coupe du monde 2026 au Canada n’a fait que confirmer cette tendance et agit comme un accélérateur pour le soccer au Québec. La ville de Montréal est aujourd’hui un véritable terrain fertile pour les clubs qui souhaitent participer à son développement.",
+      "para_2": "Installés depuis plusieurs années au Québec et après avoir navigué dans différentes ligues et équipes de Montréal, les trois amis ont donc décidé de sauter le pas en créant leur propre club. Evoluant au sein de l'ARS Concordia, niveau A, l’idée est simple. Pousser le curseur un peu plus loin qu’une simple équipe de potes partageant une bière à la fin d’une rencontre. Et si l’esprit familial d’après-match et le partage reste des piliers du club, l’Inter de Montréal a bâti son projet sur ses ambitions sportives, un style travaillé et le plaisir de jouer dans un environnement bienveillant.",
+      "para_3": "Avoir un esprit professionnel dans un monde amateur."
+    },
+    {
+      "id": 2,
+      "title": "Un club",
+      "para_1": "Fondée en 2020, l'Inter Montréal est un projet qui a pris naissance dans le cœur de trois passionnés de football : François, Raphaël et Benoît. Le soccer québécois ne cesse d’évoluer et le nombre de licenciés augmente chaque année. L’arrivée de la coupe du monde 2026 au Canada n’a fait que confirmer cette tendance et agit comme un accélérateur pour le soccer au Québec. La ville de Montréal est aujourd’hui un véritable terrain fertile pour les clubs qui souhaitent participer à son développement.",
+      "para_2": "Installés depuis plusieurs années au Québec et après avoir navigué dans différentes ligues et équipes de Montréal, les trois amis ont donc décidé de sauter le pas en créant leur propre club. Evoluant au sein de l'ARS Concordia, niveau A, l’idée est simple. Pousser le curseur un peu plus loin qu’une simple équipe de potes partageant une bière à la fin d’une rencontre. Et si l’esprit familial d’après-match et le partage reste des piliers du club, l’Inter de Montréal a bâti son projet sur ses ambitions sportives, un style travaillé et le plaisir de jouer dans un environnement bienveillant.",
+      "para_3": "Avoir un esprit professionnel dans un monde amateur."
+    }
   ]
 }

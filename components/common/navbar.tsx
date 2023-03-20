@@ -8,9 +8,9 @@ import InterMtl from "../../assets/layout/intermtl-logo.png";
 
 export default function Navigation() {
   return (
-    <Disclosure as="nav" className="fixed top-0 z-20 min-h-[70px] w-full ">
+    <Disclosure as="nav" className="fixed top-0 z-20 min-h-[70px] w-full">
       {({ open }) => (
-        <header className="max-w-container md:ajust-y  ">
+        <header className="max-w-container ajust-y  ">
           <div className="w-full md:relative ">
             <div className=" lg:ajust-x hidden items-center justify-between md:flex ">
               <a href="/" className="inline-flex items-center border-b-2 border-primary font-medium ">
