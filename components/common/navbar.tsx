@@ -1,12 +1,12 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import classNames from "classnames";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import InterMtl from "../../assets/layout/intermtl-logo.png";
 
-export default function Navigation() {
+export default function Navigation({data} : any) {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -23,21 +23,19 @@ export default function Navigation() {
   return (
     <Disclosure
       as="nav"
-      className={
-        navBg
-          ? "fixed top-0 z-20 min-h-[70px] w-full bg-white py-3  shadow-sm duration-300 ease-in-out"
-          : "ajust-y fixed top-0 z-20 min-h-[70px]  w-full duration-300 ease-in-out"
-      }
+      className={classNames(
+        navBg ? " bg-white py-3 shadow-sm" : "ajust-y fixed  ",
+        "fixed top-0 z-50 min-h-[70px] w-full duration-300 ease-in-out"
+      )}
     >
       {({ open }) => (
         <header className="max-w-container  ">
           <div className="w-full md:relative ">
             <div
-              className={
-                navBg
-                  ? " lg:ajust-x hidden items-center justify-between text-xs font-medium duration-300 ease-in-out md:flex lg:text-sm "
-                  : " lg:ajust-x hidden items-center justify-between text-sm font-medium duration-300 ease-in-out md:flex lg:text-base "
-              }
+              className={classNames(
+                navBg ? "text-xs lg:text-sm " : "text-sm lg:text-base ",
+                "lg:ajust-x hidden items-center justify-between font-medium duration-300 ease-in-out md:flex"
+              )}
             >
               <a href="/" className="inline-flex items-center border-b-2 border-primary ">
                 Accueil
@@ -48,8 +46,8 @@ export default function Navigation() {
               <a href="/staff" className="inline-flex items-center border-b-2 border-transparent">
                 Staff
               </a>
-              <div className={navBg ? "w-[70px] duration-200 ease-in" : "w-[90px] duration-200 ease-out"}>
-                <Image src={InterMtl} width="250" height="251" alt="logo" />
+              <div className={classNames(navBg ? "w-[70px] " : "w-[90px]", "duration-200 ease-in")}>
+                <Image src={data.logo} width="250" height="251" alt="logo" />
               </div>
               <a href="/news" className="inline-flex items-center border-b-2 border-transparent">
                 Actualités
@@ -73,7 +71,7 @@ export default function Navigation() {
                 )}
               </Disclosure.Button>
               <div className="w-[70px]">
-                <Image src={InterMtl} width="250" height="251" alt="logo" />
+                <Image src={data.logo} width="250" height="251" alt="logo" />
               </div>
             </div>
 

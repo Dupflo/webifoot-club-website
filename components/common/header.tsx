@@ -21,7 +21,7 @@ export default function Header(props: any) {
         </span>
       </div>
 
-      <Image src={props.image} alt="" className="h-full w-full object-cover opacity-60" />
+      <Image src={props.image} fill alt="" className="h-full w-full object-cover opacity-60" />
     </div>
   );
 }

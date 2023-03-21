@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Actu from "../../assets/home/actu.jpg";
-import { Text, Title } from "../common/typography";
-export default function SecondActu() {
+import Actu from "../../public/img/home/actu.jpg";
+import { Text, Title } from "./typography";
+export default function LittleNews() {
   return (
-    <div className="overflow-hidden lg:max-w-[30rem] 2xl:max-w-[36rem]">
-      <div>
+    <>
+      <div className=" overflow-hidden  lg:max-w-[30rem] 2xl:max-w-[36rem]">
         <Image src={Actu} alt="" className="zoom h-full w-full object-cover" />
       </div>
       <span className="flex flex-col gap-y-1 py-2">
@@ -21,6 +21,6 @@ export default function SecondActu() {
           01 janv 2023
         </Text>
       </span>
-    </div>
+    </>
   );
 }

@@ -1,12 +1,11 @@
 "use client";
-import FirstActu from "./firstActu";
-import SecondActu from "./secondActu";
-import { Title } from "../common/typography";
-
+import BigNews from "../common/bigNews";
 import Button from "../common/button";
+import LittleNews from "../common/littleNews";
+import { Title } from "../common/typography";
 export default function News() {
   return (
-    <div className="bg-primary md:ajust-y">
+    <div className="md:ajust-y bg-primary">
       <div className="max-w-container ajust-y">
         <div className="flex items-center justify-between">
           <Title
@@ -18,16 +17,16 @@ export default function News() {
           >
             <span className="flex flex-col gap-y-2">
               <span>Actualités</span>
-              <span className="sm:ml-[5rem] outline-red">Nouveautés</span>
+              <span className="outline-red sm:ml-[5rem]">Nouveautés</span>
             </span>
           </Title>
           <Button title={"Voir nos actus"} />
         </div>
         <div className="flex flex-col gap-20 pt-16 lg:flex-row lg:items-start lg:justify-center">
-          <FirstActu />
-          <div className="flex flex-col gap-y-10">
-            <SecondActu />
-            <SecondActu />
+          <BigNews />
+          <div className="flex flex-col gap-y-5">
+            <LittleNews />
+            <LittleNews />
           </div>
         </div>
       </div>

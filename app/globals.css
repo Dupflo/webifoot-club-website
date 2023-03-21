@@ -98,7 +98,7 @@
   }
 
   .img-art-property {
-    @apply h-full max-h-[200px] w-full overflow-hidden sm:max-h-[400px] sm:max-w-[1200px] lg:min-h-[550px] lg:min-w-[400px];
+    @apply relative h-full max-h-[200px] w-full overflow-hidden sm:max-h-[400px] sm:max-w-[1200px] lg:min-h-[550px] lg:min-w-[400px];
   }
 
   .zoom {

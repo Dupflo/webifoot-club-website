@@ -1,13 +1,14 @@
-import SecondActu from "@/components/home/secondActu";
 import Header from "@/components/common/header";
-import Foot from "../../assets/news/foot.jpg";
+import LittleNews from "@/components/common/littleNews";
 export default async function NewsPage() {
-  const response = await import(`../../pages/api/app.json`);
-  let header = response.default.header;
+  const response = await import(`../../pages/api/news.json`);
+  const news = response.default;
   return (
     <>
-      <Header title={header.news.title} subtitle={header.news.subtitle} image={Foot} />
-      <SecondActu />
+      <Header title={news.header.title} subtitle={news.header.subtitle} image={news.header.image} />
+      <div className="bg-primary p-5">
+        <LittleNews />
+      </div>
     </>
   );
 }

@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import More from "../../assets/home/more.png";
-import Team from "../../assets/home/team-hero.jpg";
+import More from "../../public/img/home/more.png";
+import Team from "../../public/img/home/team-hero.jpg";
 import { Title } from "../common/typography";
 
 export default function Hero() {
   return (
-    <div className="max-w-container relative flex flex-col items-center justify-center mt-24 md:mt-40">
+    <div className="max-w-container relative mt-24 flex flex-col items-center justify-center md:mt-40">
       <Title
         size={Title.size.EXTRA}
         color={Title.color.PRIMARY}
