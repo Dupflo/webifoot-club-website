@@ -1,5 +1,5 @@
 import Articles from "@/components/common/articles";
-import Header from "@/components/common/header";
+import Header from "@/components/common/header/header";
 
 export default async function HistoryPage() {
   const response = await import(`../../pages/api/history.json`);
@@ -8,9 +8,7 @@ export default async function HistoryPage() {
     <>
       <Header title={history.header.title} subtitle={history.header.subtitle} image={history.header.image} />
       {history.articles.map((el: any) => (
-        <Articles
-          data={el}
-        />
+        <Articles data={el} />
       ))}
     </>
   );

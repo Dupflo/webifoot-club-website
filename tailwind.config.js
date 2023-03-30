@@ -9,7 +9,7 @@ module.exports = {
         red: "#E7455B",
         accent: "#E7455B",
         home: "#E7E9F2",
-        gray: { DEFAULT: "#F9F8F9" },
+        gray: { DEFAULT: "#F1F1F1" },
       },
       fontSize: {
         xxs: "0.563rem", // 9px
@@ -23,7 +23,8 @@ module.exports = {
         "3xl": "2.25rem", // 36px
         "4xl": "3.125rem", // 50px
         "5xl": "4.375rem", //70px
-        "xxl": "6.250rem" //100px
+        xxl: "6.250rem", //100px
+        xxxl: "10rem",
       },
       screens: {
         "4xl": "2020px",

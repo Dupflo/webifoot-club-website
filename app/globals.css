@@ -18,6 +18,10 @@
     @apply text-base uppercase text-primary;
   }
 
+  .text-xextra {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-xxxl;
+  }
+
   .text-extra {
     @apply text-3xl sm:text-4xl lg:text-5xl xl:text-xxl;
   }

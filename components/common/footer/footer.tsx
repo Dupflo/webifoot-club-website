@@ -1,7 +1,7 @@
 import { Archivo_Black, Poppins } from "@next/font/google";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { Text, Title } from "./typography";
+import { Text, Title } from "../typography";
 
 const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });

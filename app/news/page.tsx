@@ -1,4 +1,4 @@
-import Header from "@/components/common/header";
+import Header from "@/components/common/header/header";
 import LittleNews from "@/components/common/littleNews";
 export default async function NewsPage() {
   const response = await import(`../../pages/api/news.json`);

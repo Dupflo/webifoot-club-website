@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Title } from "../common/typography";
+import { Title } from "../typography";
 
 export default function Header(props: any) {
   return (

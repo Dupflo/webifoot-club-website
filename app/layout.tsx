@@ -1,6 +1,6 @@
-import Navigation from "@/components/common/navbar";
+import Navigation from "@/components/common/navigation/navbar";
 import type { Metadata } from "next";
-import Footer from "../components/common/footer";
+import Footer from "../components/common/footer/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,9 +15,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="bg-home">
         <Navigation data={layout} />
         <main>{children}</main>
-        <Footer
-          data={layout}
-        />
+        <Footer data={layout} />
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 import Card from "@/components/common/card";
-import Header from "@/components/common/header";
+import Header from "@/components/common/header/header";
 export default async function StaffPage() {
   const response = await import(`../../pages/api/staff.json`);
   const staff = response.default;

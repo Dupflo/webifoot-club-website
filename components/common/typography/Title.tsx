@@ -1,8 +1,7 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
-import { Archivo_Black } from "@next/font/google";
-const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
+
 
 enum Tag {
   H1,
@@ -34,6 +33,7 @@ enum Size {
   XXLARGE,
   XXXLARGE,
   EXTRA,
+  XEXTRA,
 }
 
 enum Weight {
@@ -81,6 +81,7 @@ const SIZE_MAPS: Record<Size, any> = {
   [Size.XXLARGE]: "text-xxlarge",
   [Size.XXXLARGE]: "text-xxxlarge",
   [Size.EXTRA]: "text-extra",
+  [Size.XEXTRA]: "text-xextra",
 };
 
 const COLOR_MAPS: Record<Color, string> = {
@@ -129,7 +130,6 @@ export function Title(props: Props) {
           uppercase && "uppercase",
           truncate,
           shadow && "drop-shadow",
-          archivoBlack.className
         )}
         onClick={onClick}
       >
