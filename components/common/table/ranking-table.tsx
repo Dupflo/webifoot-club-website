@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Text } from "./typography";
+import { Text } from "../typography";
 const header = [
   {
     item: "Club",
@@ -43,44 +43,56 @@ const clubs = [
   {
     name: "AS Monaco",
     image: "/img/layout/as-monaco.png",
-    id: "monaco",
+    id: 0,
     results: [12, 4, 4, 0, 0, 6, 7, 8],
   },
   {
     name: "Inter Montreal",
-    image: "/img/layout/intermtl-logo.png",
-    id: "myTeam",
+    image: "/img/layout/inter-logo.webp",
+    id: 1,
     results: [9, 4, 3, 0, 1, 6, 7, 8],
   },
   {
     name: "Voltigeurs Châteaubriant",
     image: "/img/layout/voltigeurs.png",
-    id: "voltigeurs",
+    id: 2,
     results: [6, 4, 2, 0, 2, 6, 7, 8],
   },
 
   {
     name: "FC Nantes",
     image: "/img/layout/fc-nantes.png",
-    id: "nantes",
+    id: 3,
     results: [3, 4, 1, 0, 3, 6, 7, 8],
   },
   {
     name: "Real Madrid",
     image: "/img/layout/real-madrid.png",
-    id: "madrid",
+    id: 4,
+    results: [1, 4, 0, 0, 4, 6, 7, 8],
+  },
+  {
+    name: "Real Madrid",
+    image: "/img/layout/real-madrid.png",
+    id: 5,
+    results: [1, 4, 0, 0, 4, 6, 7, 8],
+  },
+  {
+    name: "Real Madrid",
+    image: "/img/layout/real-madrid.png",
+    id: 6,
     results: [1, 4, 0, 0, 4, 6, 7, 8],
   },
   // More clubs...
 ];
 
-export default function TableRanking() {
+export default function RankingTable() {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full divide-y divide-gray-300">
+            <table className="min-w-full">
               <thead className="bg-primary">
                 <tr>
                   {header.map((el) => (
@@ -94,7 +106,10 @@ export default function TableRanking() {
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
                 {clubs.map((club) => (
-                  <tr key={club.id} className={club.id == "myTeam" ? "bg-red" : "bg-white"}>
+                  <tr
+                    key={club.id}
+                    className={club.id == 1 ? "bg-red" : club.id % 2 == 0 ? "bg-white" : "bg-gray"}
+                  >
                     <td className="py-4 pl-4 pr-3 sm:pl-3">
                       <div className="flex items-center">
                         <div className="h-10 w-10 flex-shrink-0">

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
-export default function Navigation({data} : any) {
+export default function Navigation({ data }: any) {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -37,6 +37,9 @@ export default function Navigation({data} : any) {
                 "lg:ajust-x hidden items-center justify-between font-medium duration-300 ease-in-out md:flex"
               )}
             >
+              <div className={classNames(navBg ? "w-[70px] " : "w-[90px]", "duration-200 ease-in")}>
+                <Image src={data.logo} width="250" height="251" alt="logo" />
+              </div>
               <a href="/" className="inline-flex items-center border-b-2 border-primary ">
                 Accueil
               </a>
@@ -46,9 +49,7 @@ export default function Navigation({data} : any) {
               <a href="/staff" className="inline-flex items-center border-b-2 border-transparent">
                 Staff
               </a>
-              <div className={classNames(navBg ? "w-[70px] " : "w-[90px]", "duration-200 ease-in")}>
-                <Image src={data.logo} width="250" height="251" alt="logo" />
-              </div>
+
               <a href="/news" className="inline-flex items-center border-b-2 border-transparent">
                 Actualités
               </a>

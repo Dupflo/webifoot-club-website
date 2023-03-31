@@ -1,6 +1,6 @@
 "use client";
 import { HiArrowRight } from "react-icons/hi";
-import { Text } from "./typography";
+import { Text } from "../typography";
 export default function Button(props: any) {
   return (
     <div className="p-5">

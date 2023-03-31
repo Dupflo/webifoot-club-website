@@ -2,7 +2,7 @@ import { Poppins } from "@next/font/google";
 import classNames from "classnames";
 import Image from "next/image";
 import team from "../../public/img/home/team-inter.jpg";
-import Button from "../common/button";
+import Button from "../common/button/button";
 import { Text, Title } from "../common/typography";
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 

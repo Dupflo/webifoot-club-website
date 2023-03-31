@@ -1,6 +1,6 @@
 "use client";
 import BigNews from "../common/bigNews";
-import Button from "../common/button";
+import Button from "../common/button/button";
 import LittleNews from "../common/littleNews";
 import { Title } from "../common/typography";
 export default function News() {

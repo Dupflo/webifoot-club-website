@@ -1,11 +1,12 @@
 import ButtonBlue from "@/components/common/button/button-blue";
 import FlyOut from "@/components/common/flyout-menu";
 import HeaderBis from "@/components/common/header/headerBis";
-import RankingTable from "@/components/common/table/ranking-table";
+import CalendarTable from "@/components/common/table/calendar-table";
 const Head = {
-  name: "Classement",
+  name: "Calendrier",
   title: "équipe masculin sénior A",
 };
+
 const FlyOutContent = [
   {
     active: "équipe masculin sénior A",
@@ -14,9 +15,9 @@ const FlyOutContent = [
   { active: "2022 / 2023", solutions: [{ value: "2021 / 2022" }, { value: "2020 / 2021" }] },
 ];
 
-export default function RankingPage() {
+export default function CalendarPage() {
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       <div className="max-w-container">
         <HeaderBis data={Head} />
         <div className="flex flex-col gap-5 sm:flex-row sm:px-10">
@@ -24,9 +25,9 @@ export default function RankingPage() {
             <FlyOut key={content.active} data={content} />
           ))}
         </div>
-        <RankingTable />
-        <div className="flex justify-center py-10">
-          <ButtonBlue link="/calendar" data={"Voir les calendriers et résultats "} />
+        <CalendarTable />
+        <div className="flex justify-center">
+          <ButtonBlue link="/ranking" data={"Voir le classement"} />
         </div>
       </div>
     </div>
