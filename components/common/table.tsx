@@ -1,44 +1,80 @@
-const people = [
+import classNames from "classnames";
+import { Text } from "./typography";
+const header = [
   {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    item: "Club",
+    id: 0,
   },
   {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    item: "Points",
+    id: 1,
   },
   {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    item: "MJ",
+    id: 2,
   },
   {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    item: "V",
+    id: 3,
   },
-  // More people...
+  {
+    item: "N",
+    id: 4,
+  },
+  {
+    item: "D",
+    id: 5,
+  },
+  {
+    item: "BP",
+    id: 6,
+  },
+  {
+    item: "BC",
+    id: 7,
+  },
+  {
+    item: "EB",
+    id: 8,
+  },
 ];
 
-export default function Example() {
+const clubs = [
+  {
+    name: "AS Monaco",
+    image: "/img/layout/as-monaco.png",
+    id: "monaco",
+    results: [12, 4, 4, 0, 0, 6, 7, 8],
+  },
+  {
+    name: "Inter Montreal",
+    image: "/img/layout/intermtl-logo.png",
+    id: "myTeam",
+    results: [9, 4, 3, 0, 1, 6, 7, 8],
+  },
+  {
+    name: "Voltigeurs Châteaubriant",
+    image: "/img/layout/voltigeurs.png",
+    id: "voltigeurs",
+    results: [6, 4, 2, 0, 2, 6, 7, 8],
+  },
+
+  {
+    name: "FC Nantes",
+    image: "/img/layout/fc-nantes.png",
+    id: "nantes",
+    results: [3, 4, 1, 0, 3, 6, 7, 8],
+  },
+  {
+    name: "Real Madrid",
+    image: "/img/layout/real-madrid.png",
+    id: "madrid",
+    results: [1, 4, 0, 0, 4, 6, 7, 8],
+  },
+  // More clubs...
+];
+
+export default function TableRanking() {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="mt-8 flow-root">
@@ -47,68 +83,37 @@ export default function Example() {
             <table className="min-w-full divide-y divide-gray-300">
               <thead className="bg-primary">
                 <tr>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    Club
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    Equipe Masculine Sénior A
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    Points
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    MJ
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    V
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    N
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    D
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    BP
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    BC
-                  </th>
-                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
-                    EB
-                  </th>
-
-                  <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                    <span className="sr-only">Edit</span>
-                  </th>
+                  {header.map((el) => (
+                    <th scope="col" className={classNames(el.id == 0 ? "text-left" : "text-center", "py-3.5 px-3")}>
+                      <Text size={Text.size.SMALL} weight={Text.weight.SEMIBOLD} color={Text.color.WHITE}>
+                        {el.item}
+                      </Text>
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {people.map((person) => (
-                  <tr key={person.email}>
-                    <td className="py-4 pl-4 pr-3 text-sm sm:pl-3">
+                {clubs.map((club) => (
+                  <tr key={club.id} className={club.id == "myTeam" ? "bg-red" : "bg-white"}>
+                    <td className="py-4 pl-4 pr-3 sm:pl-3">
                       <div className="flex items-center">
                         <div className="h-10 w-10 flex-shrink-0">
-                          <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
+                          <img className="h-full w-full object-contain" src={club.image} alt="" />
                         </div>
                         <div className="ml-4">
-                          <div className="font-medium text-black">{person.name}</div>
-                          <div className="text-gray-500">{person.email}</div>
+                          <Text size={Text.size.SMALL} weight={Text.weight.SEMIBOLD} color={Text.color.DARK}>
+                            {club.name}
+                          </Text>
                         </div>
                       </div>
                     </td>
-                    <td className=" px-3 py-4 text-sm text-gray-500">
-                      <div className="text-black">{person.title}</div>
-                      <div className="text-gray-500">{person.department}</div>
-                    </td>
-                    <td className="py-4 pl-6 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-3 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-2 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-2 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-2 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-3 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-3 text-sm font-bold text-gray-500">43</td>
-                    <td className="py-4 pl-3 text-sm font-bold text-gray-500">43</td>
+                    {club.results?.map((el) => (
+                      <td className="text-center">
+                        <Text size={Text.size.SMALL} weight={Text.weight.BOLD} color={Text.color.DARK}>
+                          {el}
+                        </Text>
+                      </td>
+                    ))}
                   </tr>
                 ))}
               </tbody>
