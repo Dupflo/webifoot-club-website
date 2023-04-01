@@ -36,6 +36,18 @@ const matchs = [
     time: "20h00",
     stadium: "Stade de la Ville en Bois",
   },
+  {
+    local: "Liverpool",
+    logoLocal: "/img/layout/liverpool.png",
+    localGoal: 3,
+    visit: "Real Madrid",
+    logoVisit: "/img/layout/real-madrid.png",
+    visitGoal: 3,
+    id: 1,
+    day: "Jeudi 23 Novembre",
+    time: "20h00",
+    stadium: "Anfield Stadium",
+  },
 ];
 
 export default function CalendarTable() {

@@ -2,6 +2,9 @@
 import { RadioGroup } from "@headlessui/react";
 import classNames from "classnames";
 import { useState } from "react";
+import ButtonBlue from "./button/button-blue";
+import Filters from "./filters";
+import { Text, Title } from "./typography";
 
 const product = {
   name: "Maillot France Domicile",
@@ -16,19 +19,25 @@ const product = {
   images: [
     {
       id: 1,
-      imageSrc: "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+      imageSrc: "/img/shop/france.png",
       imageAlt: "Back of women's Basic Tee in black.",
       primary: true,
     },
     {
       id: 2,
-      imageSrc: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
+      imageSrc: "/img/shop/back.png",
       imageAlt: "Side profile of women's Basic Tee in black.",
       primary: false,
     },
     {
       id: 3,
-      imageSrc: "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      imageSrc: "/img/shop/front.png",
+      imageAlt: "Front of women's Basic Tee in black.",
+      primary: false,
+    },
+    {
+      id: 4,
+      imageSrc: "/img/shop/nike.png",
       imageAlt: "Front of women's Basic Tee in black.",
       primary: false,
     },
@@ -39,28 +48,17 @@ const product = {
     { name: "Blue", bgColor: "bg-primary", selectedColor: "ring-red" },
   ],
   sizes: [
-    { name: "XXS", inStock: true },
     { name: "XS", inStock: true },
     { name: "S", inStock: true },
     { name: "M", inStock: true },
     { name: "L", inStock: true },
     { name: "XL", inStock: false },
   ],
-  description: `
-    <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>
-    <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
-  `,
-  details: [
-    "Only the best materials",
-    "Ethically and locally made",
-    "Pre-washed and pre-shrunk",
-    "Machine wash cold with similar colors",
-  ],
 };
 
 export default function ProductOverview() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const [selectedColor, setSelectedColor] = useState(product.colors[2]);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[1]);
 
   return (
     <div className="bg-white">
@@ -70,8 +68,10 @@ export default function ProductOverview() {
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">
-                  <a href={breadcrumb.href} className="mr-4 text-sm font-medium text-gray-900">
-                    {breadcrumb.name}
+                  <a href={breadcrumb.href} className="mr-4">
+                    <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM} color={Text.color.DARK}>
+                      {breadcrumb.name}
+                    </Text>
                   </a>
                   <svg viewBox="0 0 6 20" aria-hidden="true" className="h-5 w-auto text-gray-300">
                     <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
@@ -80,8 +80,10 @@ export default function ProductOverview() {
               </li>
             ))}
             <li className="text-sm">
-              <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                {product.name}
+              <a href={product.href} aria-current="page">
+                <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM} color={Text.color.DARK}>
+                  {product.name}
+                </Text>
               </a>
             </li>
           </ol>
@@ -90,24 +92,31 @@ export default function ProductOverview() {
           <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5 lg:col-start-8">
               <div className="flex flex-col gap-y-5">
-                <h1 className="text-xl font-medium text-gray-900">{product.name}</h1>
-                <p className="text-xl font-bold text-gray-900">{product.price}</p>
+                <Title size={Title.size.XLARGE} weight={Title.weight.SEMIBOLD} uppercase>
+                  {product.name}
+                </Title>
+
+                <Title size={Title.size.XLARGE} weight={Title.weight.BOLD} uppercase>
+                  {product.price}
+                </Title>
               </div>
             </div>
 
             {/* Image gallery */}
-            <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mt-0">
               <h2 className="sr-only">Images</h2>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <div className="grid gap-5 sm:grid-cols-3 sm:grid-rows-3">
                 {product.images.map((image) => (
                   <img
                     key={image.id}
                     src={image.imageSrc}
                     alt={image.imageAlt}
                     className={classNames(
-                      image.primary ? "lg:col-span-1 lg:row-span-2" : "hidden lg:block",
-                      "rounded-lg"
+                      image.primary
+                        ? "h-full w-full object-cover sm:col-span-2 sm:row-span-3"
+                        : "block object-contain sm:h-36 sm:w-36",
+                      "rounded-lg bg-gray"
                     )}
                   />
                 ))}
@@ -118,7 +127,9 @@ export default function ProductOverview() {
               <form>
                 {/* Color picker */}
                 <div>
-                  <h2 className="text-sm font-medium text-gray-900">Couleur</h2>
+                  <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM} color={Text.color.DARK}>
+                    Couleur
+                  </Text>
 
                   <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-2">
                     <RadioGroup.Label className="sr-only"> Choose a color </RadioGroup.Label>
@@ -156,7 +167,9 @@ export default function ProductOverview() {
                 {/* Size picker */}
                 <div className="mt-8">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-sm font-medium text-gray-900">Taille</h2>
+                    <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM} color={Text.color.DARK}>
+                      Taille
+                    </Text>
                   </div>
 
                   <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-2">
@@ -184,13 +197,10 @@ export default function ProductOverview() {
                     </div>
                   </RadioGroup>
                 </div>
-
-                <button
-                  type="submit"
-                  className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-red focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                >
-                  Ajouter au panier
-                </button>
+                <div className="mt-10">
+                  <ButtonBlue data={"Ajouter au panier"} />
+                </div>
+                <Filters />
               </form>
             </div>
           </div>
