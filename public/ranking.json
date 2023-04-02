@@ -1,0 +1,204 @@
+{
+     "head": {
+        "name": "Classement",
+        "title": "équipe masculine sénior A"
+    },
+
+    "header": [
+        {
+            "item": "Club",
+            "id": 0
+        },
+        {
+            "item": "Points",
+            "id": 1
+        },
+        {
+            "item": "MJ",
+            "id": 2
+        },
+        {
+            "item": "V",
+            "id": 3
+        },
+        {
+            "item": "N",
+            "id": 4
+        },
+        {
+            "item": "D",
+            "id": 5
+        },
+        {
+            "item": "BP",
+            "id": 6
+        },
+        {
+            "item": "BC",
+            "id": 7
+        },
+        {
+            "item": "EB",
+            "id": 8
+        }
+    ],
+    
+    "clubs": [
+        {
+            "name": "AS Monaco",
+            "logo": "/img/layout/as-monaco.png",
+            "id": 1,
+            "results": [
+                {
+                    "key": "Points",
+                    "value": 1
+                },
+                {
+                    "key": "MJ",
+                    "value": 1
+                },
+                {
+                    "key": "V",
+                    "value": 1
+                },
+                {
+                    "key": "N",
+                    "value": 1
+                },
+                {
+                    "key": "D",
+                    "value": 1
+                },
+                {
+                    "key": "BP",
+                    "value": 1
+                },
+                {
+                    "key": "BC",
+                    "value": 1
+                },
+                {
+                    "key": "EB",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Inter Montreal",
+            "logo": "/img/layout/inter-logo.webp",
+            "id": 2,
+            "results": [
+                {
+                    "key": "Points",
+                    "value": 2
+                },
+                {
+                    "key": "MJ",
+                    "value": 1
+                },
+                {
+                    "key": "V",
+                    "value": 1
+                },
+                {
+                    "key": "N",
+                    "value": 1
+                },
+                {
+                    "key": "D",
+                    "value": 1
+                },
+                {
+                    "key": "BP",
+                    "value": 1
+                },
+                {
+                    "key": "BC",
+                    "value": 1
+                },
+                {
+                    "key": "EB",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Voltigeurs Châteaubriant",
+            "logo": "/img/layout/voltigeurs.png",
+            "id": 3,
+            "results": [
+                {
+                    "key": "Points",
+                    "value": 3
+                },
+                {
+                    "key": "MJ",
+                    "value": 1
+                },
+                {
+                    "key": "V",
+                    "value": 1
+                },
+                {
+                    "key": "N",
+                    "value": 1
+                },
+                {
+                    "key": "D",
+                    "value": 1
+                },
+                {
+                    "key": "BP",
+                    "value": 1
+                },
+                {
+                    "key": "BC",
+                    "value": 1
+                },
+                {
+                    "key": "EB",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "FC Nantes",
+            "logo": "/img/layout/fc-nantes.png",
+            "id": 4,
+            "results": [
+                {
+                    "key": "Points",
+                    "value": 4
+                },
+                {
+                    "key": "MJ",
+                    "value": 1
+                },
+                {
+                    "key": "V",
+                    "value": 1
+                },
+                {
+                    "key": "N",
+                    "value": 1
+                },
+                {
+                    "key": "D",
+                    "value": 1
+                },
+                {
+                    "key": "BP",
+                    "value": 1
+                },
+                {
+                    "key": "BC",
+                    "value": 1
+                },
+                {
+                    "key": "EB",
+                    "value": 1
+                }
+            ]
+        }
+    ]
+}

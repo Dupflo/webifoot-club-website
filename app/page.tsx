@@ -1,4 +1,3 @@
-"use client";
 import Hero from "@/components/home/hero";
 import History from "@/components/home/history";
 import News from "@/components/home/news";

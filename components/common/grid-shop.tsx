@@ -1,78 +1,13 @@
 import { Text, Title } from "./typography";
 
-const products = [
-  {
-    id: 0,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-  {
-    id: 1,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-  {
-    id: 2,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-  {
-    id: 3,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-  {
-    id: 4,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-  {
-    id: 5,
-    name: "Maillot France Domicile",
-    href: "#",
-    price: "90€",
-    description: "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
-    options: "Bleu",
-    imageSrc: "/img/shop/france.png",
-    imageAlt: "Maillot Bleu",
-  },
-
-  // More products...
-];
-
-export default function GridShop() {
+export default function GridShop({ data }: any) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 
         <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">
-          {products.map((product) => (
+          {data.products.map((product: any) => (
             <div
               key={product.id}
               className="relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white "

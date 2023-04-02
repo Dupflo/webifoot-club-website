@@ -1,0 +1,38 @@
+{
+    "head": {
+        "name": "Inter Montreal",
+        "title": "Boutique du club"
+    },
+    "products": [
+        {
+            "id": 0,
+            "name": "Maillot France Domicile",
+            "href": "#",
+            "price": "90€",
+            "description": "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
+            "options": "Bleu",
+            "imageSrc": "/img/shop/france.png",
+            "imageAlt": "Maillot Bleu"
+        },
+        {
+            "id": 1,
+            "name": "Maillot France Domicile",
+            "href": "#",
+            "price": "90€",
+            "description": "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
+            "options": "Bleu",
+            "imageSrc": "/img/shop/france.png",
+            "imageAlt": "Maillot Bleu"
+        },
+        {
+            "id": 2,
+            "name": "Maillot France Domicile",
+            "href": "#",
+            "price": "90€",
+            "description": "Le maillot de l’équipe de France féminine lors des matchs à domicile.",
+            "options": "Bleu",
+            "imageSrc": "/img/shop/france.png",
+            "imageAlt": "Maillot Bleu"
+        }
+    ]
+}

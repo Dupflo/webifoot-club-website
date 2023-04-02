@@ -4,7 +4,6 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
 import { Fragment, useState } from "react";
-import GridShop from "../grid-shop";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -57,7 +56,7 @@ const filters = [
   },
 ];
 
-export default function Example() {
+export default function SideBarShop({component} : any) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
@@ -289,7 +288,7 @@ export default function Example() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
-                <GridShop />
+                {component}
               </div>
             </div>
           </section>

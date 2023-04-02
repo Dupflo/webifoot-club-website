@@ -14,11 +14,11 @@ export default function HeaderBis({ data }: any) {
       )}
     >
       <Title size={Title.size.XEXTRA} weight={Title.weight.LIGHT} color={Title.color.GRAY} uppercase>
-        {data.name}
+        {data.head.name}
       </Title>
       <span className="absolute top-0 left-0 flex h-full w-full items-center justify-center pt-24">
         <Title size={Title.size.XXXLARGE} weight={Title.weight.LIGHT} color={Title.color.DARK} uppercase>
-          {data.title}
+          {data.head.title}
         </Title>
       </span>
     </div>

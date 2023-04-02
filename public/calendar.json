@@ -1,0 +1,77 @@
+{
+    "head": {
+        "name": "Calendrier",
+        "title": "équipe masculine sénior A"
+    },
+    
+    "date": [
+        {
+            "month": "Oct",
+            "id": 0,
+            "selected": false
+        },
+        {
+            "month": "Nov",
+            "id": 1,
+            "selected": true
+        },
+        {
+            "month": "Déc",
+            "id": 2,
+            "selected": false
+        },
+        {
+            "month": "Jan",
+            "id": 3,
+            "selected": false
+        },
+        {
+            "month": "Fév",
+            "id": 4,
+            "selected": false
+        },
+        {
+            "month": "Mar",
+            "id": 5,
+            "selected": false
+        }
+    ],
+    "matchs": [
+        {
+            "local": "FC Nantes",
+            "logoLocal": "/img/layout/fc-nantes.png",
+            "localGoal": 3,
+            "visit": "Inter Montreal",
+            "logoVisit": "/img/layout/inter-logo.webp",
+            "visitGoal": 1,
+            "id": 0,
+            "day": "Vendredi 24 Novembre",
+            "time": "16h30",
+            "stadium": "Stade de la Beaujoire"
+        },
+        {
+            "local": "Voltigeurs Châteaubriant",
+            "logoLocal": "/img/layout/voltigeurs.png",
+            "localGoal": 2,
+            "visit": "AS Monaco",
+            "logoVisit": "/img/layout/as-monaco.png",
+            "visitGoal": 4,
+            "id": 1,
+            "day": "Jeudi 23 Novembre",
+            "time": "20h00",
+            "stadium": "Stade de la Ville en Bois"
+        },
+        {
+            "local": "Liverpool",
+            "logoLocal": "/img/layout/liverpool.png",
+            "localGoal": 3,
+            "visit": "Real Madrid",
+            "logoVisit": "/img/layout/real-madrid.png",
+            "visitGoal": 3,
+            "id": 1,
+            "day": "Jeudi 23 Novembre",
+            "time": "20h00",
+            "stadium": "Anfield Stadium"
+        }
+    ]
+}

@@ -6,66 +6,16 @@ import ButtonBlue from "./button/button-blue";
 import Filters from "./filters";
 import { Text, Title } from "./typography";
 
-const product = {
-  name: "Maillot France Domicile",
-  price: "90.00€",
-  rating: 3.9,
-  reviewCount: 512,
-  href: "#",
-  breadcrumbs: [
-    { id: 1, name: "Femmes", href: "#" },
-    { id: 2, name: "Nouveautés", href: "#" },
-  ],
-  images: [
-    {
-      id: 1,
-      imageSrc: "/img/shop/france.png",
-      imageAlt: "Back of women's Basic Tee in black.",
-      primary: true,
-    },
-    {
-      id: 2,
-      imageSrc: "/img/shop/back.png",
-      imageAlt: "Side profile of women's Basic Tee in black.",
-      primary: false,
-    },
-    {
-      id: 3,
-      imageSrc: "/img/shop/front.png",
-      imageAlt: "Front of women's Basic Tee in black.",
-      primary: false,
-    },
-    {
-      id: 4,
-      imageSrc: "/img/shop/nike.png",
-      imageAlt: "Front of women's Basic Tee in black.",
-      primary: false,
-    },
-  ],
-  colors: [
-    { name: "Grey", bgColor: "bg-gray-200", selectedColor: "ring-red" },
-    { name: "Black", bgColor: "bg-black", selectedColor: "ring-red" },
-    { name: "Blue", bgColor: "bg-primary", selectedColor: "ring-red" },
-  ],
-  sizes: [
-    { name: "XS", inStock: true },
-    { name: "S", inStock: true },
-    { name: "M", inStock: true },
-    { name: "L", inStock: true },
-    { name: "XL", inStock: false },
-  ],
-};
-
-export default function ProductOverview() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[2]);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[1]);
+export default function ProductOverview({ data }: any) {
+  const [selectedColor, setSelectedColor] = useState(data.product.colors[2]);
+  const [selectedSize, setSelectedSize] = useState(data.product.sizes[1]);
 
   return (
     <div className="bg-white">
       <div className="pt-6">
         <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ol role="list" className="flex items-center space-x-4">
-            {product.breadcrumbs.map((breadcrumb) => (
+            {data.product.breadcrumbs.map((breadcrumb: any) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">
                   <a href={breadcrumb.href} className="mr-4">
@@ -80,9 +30,9 @@ export default function ProductOverview() {
               </li>
             ))}
             <li className="text-sm">
-              <a href={product.href} aria-current="page">
+              <a href={data.product.href} aria-current="page">
                 <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM} color={Text.color.DARK}>
-                  {product.name}
+                  {data.product.name}
                 </Text>
               </a>
             </li>
@@ -93,11 +43,11 @@ export default function ProductOverview() {
             <div className="lg:col-span-5 lg:col-start-8">
               <div className="flex flex-col gap-y-5">
                 <Title size={Title.size.XLARGE} weight={Title.weight.SEMIBOLD} uppercase>
-                  {product.name}
+                  {data.product.name}
                 </Title>
 
                 <Title size={Title.size.XLARGE} weight={Title.weight.BOLD} uppercase>
-                  {product.price}
+                  {data.product.price}
                 </Title>
               </div>
             </div>
@@ -107,7 +57,7 @@ export default function ProductOverview() {
               <h2 className="sr-only">Images</h2>
 
               <div className="grid gap-5 sm:grid-cols-3 sm:grid-rows-3">
-                {product.images.map((image) => (
+                {data.product.images.map((image: any) => (
                   <img
                     key={image.id}
                     src={image.imageSrc}
@@ -134,7 +84,7 @@ export default function ProductOverview() {
                   <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-2">
                     <RadioGroup.Label className="sr-only"> Choose a color </RadioGroup.Label>
                     <div className="flex items-center space-x-3">
-                      {product.colors.map((color) => (
+                      {data.product.colors.map((color: any) => (
                         <RadioGroup.Option
                           key={color.name}
                           value={color}
@@ -175,7 +125,7 @@ export default function ProductOverview() {
                   <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-2">
                     <RadioGroup.Label className="sr-only"> Choose a size </RadioGroup.Label>
                     <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
-                      {product.sizes.map((size) => (
+                      {data.product.sizes.map((size: any) => (
                         <RadioGroup.Option
                           key={size.name}
                           value={size}
