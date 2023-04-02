@@ -135,9 +135,11 @@ export default function ShoppingComponent() {
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
                   <dt className="flex items-center">
                     <Text size={Text.size.SMALL}>{recap.key}</Text>
-                    <a href="#" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
-                      <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
-                    </a>
+                    {recap.question ? (
+                      <a href="#" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
+                        <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
+                      </a>
+                    ) : null}
                   </dt>
                   <dd>
                     <Text size={Text.size.SMALL} weight={Text.weight.MEDIUM}>

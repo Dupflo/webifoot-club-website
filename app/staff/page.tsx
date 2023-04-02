@@ -1,11 +1,11 @@
 import Card from "@/components/common/card";
 import Header from "@/components/common/header/header";
 export default async function StaffPage() {
-  const response = await import(`../../pages/api/staff.json`);
+  const response = await import(`../../public/staff.json`);
   const staff = response.default;
   return (
     <>
-      <Header title={staff.header.title} subtitle={staff.header.subtitle} image={staff.header.image} />
+      <Header data={staff.header} />
 
       <div className=" bg-primary">
         <div className="max-w-container ajust-y">

@@ -1,5 +1,9 @@
+import { Archivo_Black, Poppins } from "@next/font/google";
 import Image from "next/image";
 import { Text, Title } from "./typography";
+
+const arial = Archivo_Black({ weight: "400", subsets: ["latin"] });
+const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export default function Articles({ data }: any) {
   return (
@@ -17,16 +21,20 @@ export default function Articles({ data }: any) {
           />
         </div>
         <span className="flex flex-col gap-y-8">
-          <Title size={Title.size.XXXLARGE} color={Title.color.PRIMARY} uppercase>
-            {data.title}
-          </Title>
-          <Text size={Text.size.LARGE} color={Text.color.DARK}>
-            <span className="flex flex-col gap-y-8">
-              <span>{data.para_1}</span>
-              <span>{data.para_2}</span>
-              <span>{data.para_3}</span>
-            </span>
-          </Text>
+          <div className={arial.className}>
+            <Title size={Title.size.XXXLARGE} color={Title.color.PRIMARY} uppercase>
+              {data.title}
+            </Title>
+          </div>
+          <div className={poppins.className}>
+            <Text size={Text.size.LARGE} color={Text.color.DARK}>
+              <span className="flex flex-col gap-y-8">
+                <span>{data.para_1}</span>
+                <span>{data.para_2}</span>
+                <span>{data.para_3}</span>
+              </span>
+            </Text>
+          </div>
         </span>
       </div>
     </div>

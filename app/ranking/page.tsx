@@ -1,7 +1,12 @@
+"use client";
+
 import ButtonBlue from "@/components/common/button/button-blue";
 import FlyOut from "@/components/common/flyout-menu";
 import HeaderBis from "@/components/common/header/headerBis";
 import RankingTable from "@/components/common/table/ranking-table";
+import { useEffect } from "react";
+import { useLayoutContext } from "../Context/layout-context";
+
 const Head = {
   name: "Classement",
   title: "équipe masculin sénior A",
@@ -15,6 +20,12 @@ const FlyOutContent = [
 ];
 
 export default function RankingPage() {
+  const { setLayout } = useLayoutContext();
+
+  useEffect(() => {
+    setLayout("bis");
+  });
+
   return (
     <div className="bg-white ">
       <div className="max-w-container">

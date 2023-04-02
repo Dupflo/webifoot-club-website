@@ -12,7 +12,7 @@ const pages = [
 
 export default function Pagination() {
   return (
-    <nav className="flex justify-between">
+    <nav className="flex justify-between py-10">
       <div className="flex cursor-pointer items-center rounded-md border-2 py-2 px-4 duration-100 ease-in hover:bg-gray-50">
         <Text size={Text.size.NORMAL}>Précédent</Text>
       </div>
