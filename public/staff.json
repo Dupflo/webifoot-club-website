@@ -1,0 +1,27 @@
+{
+  "header": { "title": "Staff", "subtitle": "Du club", "image": "http://localhost:3000/img/staff/field.jpg" },
+
+  "card": [
+    {
+      "id": 0,
+      "role": "Président",
+      "name": "François Clavel",
+      "about": "Président fondateur de l'Inter de Montréal, François est un passionné de football qui souhaite dynamiser et innover dans le domaine du football au Québec. L'Inter de Montréal c'est son bébé, pour lui c'est un club mais aussi une marque qui doit rayonner à l'international.  La création de Ligue Canadienne en vue de la coupe du monde 2026 a été l'élément déclencheur de la création du club.",
+      "image": "http://localhost:3000/img/staff/clavel.jpg"
+    },
+    {
+      "id": 1,
+      "role": "Directeur sportif et entraineur",
+      "name": "Benoît Berthier",
+      "about": "Inter Montréal n’en serait pas là aujourd’hui sans lui. Il dirige la direction sportive du club, surveille notre stratégie de jeu et nous conseille sur la meilleure approche à adopter. Son objectif est de bâtir une équipe compétitive, de joueurs motivés dans une ambiance bienveillante et fun!",
+      "image": "http://localhost:3000/img/staff/berthier.jpg"
+    },
+    {
+      "id": 2,
+      "role": "Directeur communication et finance",
+      "name": "Raphaël Iscar",
+      "about": "Raphaël vient apporter son expérience en stratégie de communication digitale pour donner une image innovante au club de l’Inter. Il est aussi en charge de s’assurer de la bonne santé financière du club afin de pouvoir vous permettre de bénéficier d’évènements spéciaux, et d’équipement de première qualité.",
+      "image": "http://localhost:3000/img/staff/iscar.jpg"
+    }
+  ]
+}

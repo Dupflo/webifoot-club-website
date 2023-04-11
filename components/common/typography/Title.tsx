@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { ReactNode } from "react";
 
+
+
 enum Tag {
   H1,
   H2,
@@ -31,6 +33,7 @@ enum Size {
   XXLARGE,
   XXXLARGE,
   EXTRA,
+  XEXTRA,
 }
 
 enum Weight {
@@ -78,6 +81,7 @@ const SIZE_MAPS: Record<Size, any> = {
   [Size.XXLARGE]: "text-xxlarge",
   [Size.XXXLARGE]: "text-xxxlarge",
   [Size.EXTRA]: "text-extra",
+  [Size.XEXTRA]: "text-xextra",
 };
 
 const COLOR_MAPS: Record<Color, string> = {
@@ -125,7 +129,7 @@ export function Title(props: Props) {
           onClick && "cursor-pointer",
           uppercase && "uppercase",
           truncate,
-          shadow && "drop-shadow"
+          shadow && "drop-shadow",
         )}
         onClick={onClick}
       >

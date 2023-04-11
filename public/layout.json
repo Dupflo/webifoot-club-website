@@ -1,0 +1,17 @@
+{
+  "logo": "/img/layout/intermtl-logo.png",
+  "sponsor": "/img/layout/fabbro.png",
+
+  "navigation" : [
+  { "name": "Accueil", "id": "", "selected": true },
+  { "name": "Histoire", "id": "history", "selected": false },
+  { "name": "Staff", "id": "staff", "selected": false },
+  { "name": "Actualités", "id": "news", "selected": false },
+  { "name": "Contact", "id": "contact", "selected": false }
+],
+
+"footer" : {
+  "title" : "Nos Sponsors",
+  "sponsors" : [ {"image" : "/img/layout/fabbro.png", "id" : 0},{"image" : "/img/layout/fabbro.png", "id" : 1},{"image" : "/img/layout/fabbro.png", "id" : 2}]
+}
+}

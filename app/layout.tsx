@@ -1,23 +1,26 @@
-import { Montserrat } from "@next/font/google";
+import Navigation from "@/components/common/navigation/navigation";
 import type { Metadata } from "next";
-import Navigation from "../components/common/navigation";
-import Footer from "./footer";
+import Footer from "../components/common/footer/footer";
+import { LayoutContextProvider } from "./Context/layout-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Club Name",
-  description: "Welcome to Club Name",
+  title: "Inter Montreal",
+  description: "Welcome to Inter Montreal website",
 };
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const response = await import(`../public/layout.json`);
+  const layoutContent = response.default;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+      <body className="bg-home">
+        <LayoutContextProvider>
+          <Navigation data={layoutContent} />
+          <main>{children}</main>
+          <Footer data={layoutContent} />
+        </LayoutContextProvider>
       </body>
     </html>
   );

@@ -1,16 +1,42 @@
 "use client";
-
-import { Text, Title } from "@/components/common/typography";
+import Image from "next/image";
+import More from "../../public/img/home/more.png";
+import Team from "../../public/img/home/team-hero.jpg";
+import { Title } from "../common/typography";
 
 export default function Hero() {
   return (
-    <div>
-      <Title size={Title.size.EXTRA} color={Title.color.PRIMARY} weight={Title.weight.SEMIBOLD}>
-        Homepage Hero
+    <div className="max-w-container relative mt-24 flex flex-col items-center justify-center md:mt-40">
+      <Title
+        size={Title.size.EXTRA}
+        color={Title.color.PRIMARY}
+        weight={Title.weight.BOLD}
+        align={Title.align.CENTER}
+        uppercase
+      >
+        <span>Inter Montréal</span>
       </Title>
-      <Text size={Text.size.LARGE} color={Title.color.PRIMARY}>
-        <em>Time is money, so develop recurring revenue</em>
-      </Text>
+      <Title
+        size={Title.size.XXXLARGE}
+        color={Title.color.PRIMARY}
+        weight={Title.weight.BOLD}
+        align={Title.align.CENTER}
+        uppercase
+      >
+        <span className="outline-blue">Le futur du football à Montréal</span>
+      </Title>
+      <div className="my-8 flex max-h-[200px] w-full items-center overflow-hidden rounded-lg shadow-md sm:max-h-[600px]">
+        <Image src={Team} alt="" className="zoom h-full w-full scale-125 object-cover sm:scale-110" />
+      </div>
+      <div className="rounded-full">
+        <Image
+          src={More}
+          width="398"
+          height="398"
+          className="absolute right-8 bottom-10 w-[5rem] motion-safe:animate-spin-slow sm:w-[8rem] md:bottom-5 md:right-10 xl:bottom-0 xl:w-[12rem] "
+          alt=""
+        />
+      </div>
     </div>
   );
 }
